@@ -1,3 +1,6 @@
 [submodule "power-outage-monitor/emailer"]
 	path = power-outage-monitor/emailer
 	url = https://github.com/alex-lt-kong/emailer.git
+[submodule "dot-agents"]
+	path = dot-agents
+	url = https://github.com/team-alex-kong/dot-agents.git

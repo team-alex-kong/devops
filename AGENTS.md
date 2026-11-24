@@ -1,3 +1,1 @@
-- read and follow https://github.com/team-alex-kong/dot-agents/blob/main/AGENTS.md;
-- Your harness's default sandbox may block either DNS resolution or web fetching. Seek its approval to run outside the sandbox if needed;
-- If fetching fails, stop and report the error.
+@./dot-agents/AGENTS.md

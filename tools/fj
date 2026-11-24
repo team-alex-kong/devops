@@ -53,6 +53,14 @@ PROGRAMS = {
         mkdir={"~/.codex"},
         ro={"~/.codex/config.toml", "~/.local/bin/codex"},
     ), NESTED_BWRAP],
+    "agy": [agent(
+        mkdir={"~/.gemini"},
+        ro={"~/.gemini/antigravity-cli/settings.json", "~/.local/bin/agy"},
+        env={"DBUS_SESSION_BUS_ADDRESS", "XDG_RUNTIME_DIR", "GEMINI_API_KEY", "GOOGLE_GEMINI_BASE_URL"},
+    ), NESTED_BWRAP, {
+        "blacklist-": {"${RUNUSER}"}, "whitelist+": {"${RUNUSER}/bus"},
+        "dbus-user": "filter", "dbus-user.talk": {"org.freedesktop.secrets"},
+    }],
     "wechat": [{  # GUI app: its own private home instead of a project dir
         "exec": "~/Applications/WeChatLinux_x86_64.AppImage",
         "appimage": True,
